@@ -1,304 +1,503 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UIU January Newsletter</title>
     <style>
         /* RESET & BASICS */
-        body { margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        table { border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-        td { padding: 0; }
-        img { border: 0; display: block; max-width: 100%; height: auto; }
-        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            border-spacing: 0;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
         /* TYPOGRAPHY */
-        h2 { margin: 0 0 10px 0; font-size: 20px; color: #333333; line-height: 1.3; font-weight: 700; }
-        p { margin: 0 0 15px 0; font-size: 15px; color: #555555; line-height: 1.6; }
-        a.read-more { color: #FF5722; text-decoration: none; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid transparent; transition: border-color 0.3s; }
-        a.read-more:hover { border-bottom-color: #FF5722; }
-        a.watch-now { color: #d32f2f; text-decoration: none; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; border-bottom: 2px solid transparent; transition: border-color 0.3s; }
-        a.watch-now:hover { border-bottom-color: #d32f2f; }
-        
+        h2 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #333333;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        a.read-more {
+            color: #FF5722;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        a.read-more:hover {
+            border-bottom-color: #FF5722;
+        }
+
+        a.watch-now {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        a.watch-now:hover {
+            border-bottom-color: #d32f2f;
+        }
+
         /* LAYOUTS */
-        .wrapper { width: 100%; table-layout: fixed; background-color: #f4f4f4; padding-bottom: 40px; }
-        .main-content { background-color: #ffffff; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
-        .story-section { padding: 25px; border-bottom: 1px solid #eeeeee; }
-        .bg-gray { background-color: #f9f9f9; }
-        
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f4f4f4;
+            padding-bottom: 40px;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .story-section {
+            padding: 25px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .bg-gray {
+            background-color: #f9f9f9;
+        }
+
         /* RESPONSIVE */
         @media screen and (max-width: 600px) {
-            .two-col-table { width: 100% !important; display: block; }
-            .col-img { width: 100% !important; display: block; padding-right: 0 !important; margin-bottom: 15px; }
-            .col-text { width: 100% !important; display: block; }
-            .col-text h2 { margin-top: 0 !important; }
-            .main-content { width: 100% !important; border-radius: 0; }
-            h2 { font-size: 18px !important; }
+            .two-col-table {
+                width: 100% !important;
+                display: block;
+            }
+
+            .col-img {
+                width: 100% !important;
+                display: block;
+                padding-right: 0 !important;
+                margin-bottom: 15px;
+            }
+
+            .col-text {
+                width: 100% !important;
+                display: block;
+            }
+
+            .col-text h2 {
+                margin-top: 0 !important;
+            }
+
+            .main-content {
+                width: 100% !important;
+                border-radius: 0;
+            }
+
+            h2 {
+                font-size: 18px !important;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<center class="wrapper">
-    <table class="main-content" width="600" cellpadding="0" cellspacing="0" border="0" align="center">
-        
-        <!-- BANNER -->
-        <tr>
-            <td align="center" style="background-color: #ffffff; padding: 0;">
-                <!-- Placeholder for Banner -->
-                <img src="images/banner.jpg" alt="UIU January Newsletter Banner" width="600" style="width: 100%; height: auto; display: block;">
-            </td>
-        </tr>
+    <center class="wrapper">
+        <table class="main-content" width="600" cellpadding="0" cellspacing="0" border="0" align="center">
 
-        <!-- Story 1: Convocation -->
-        <tr>
-            <td class="story-section">
-                <a href="https://www.tbsnews.net/economy/corporates/uiu-holds-8th-convocation-awards-degrees-1736-students-1320696">
-                    <img src="images/UIU_Convocation.jpg" alt="UIU 8th Convocation" width="550" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                </a>
-                <h2 style="color: #FF5722; margin-top: 20px;">UIU's 8th Convocation Sees 1,736 Students Graduate</h2>
-                <p>United International University (UIU) celebrated its 8th Convocation on December 27, 2025, awarding degrees to 1,736 students. During the ceremony, speakers encouraged the new graduates to contribute to societal development and dedicate themselves to the welfare of humanity. Four outstanding students were also awarded gold medals for academic excellence.</p>
-                <a href="https://www.tbsnews.net/economy/corporates/uiu-holds-8th-convocation-awards-degrees-1736-students-1320696" class="read-more">[Read More] &rarr;</a>
-            </td>
-        </tr>
+            <!-- BANNER -->
+            <tr>
+                <td align="center" style="background-color: #ffffff; padding: 0;">
+                    <!-- Updated Banner -->
+                    <img src="images/banner.png" alt="UIU January Newsletter Banner" width="600"
+                        style="width: 100%; height: auto; display: block;">
+                </td>
+            </tr>
 
-        <!-- Story 2: Tareq Hasan (Gold Medalist) -->
-        <tr>
-            <td class="story-section bg-gray">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/Tareq.png" alt="Md. Tareq Hasan" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>Golden words from the Gold Medalist: Md. Tareq Hasan</h2>
-                            <p>Md. Tareq Hasan, a lecturer in UIU's CSE department, was awarded a gold medal at the 8th Convocation for academic excellence. This is his second gold medal from the university, having achieved a perfect CGPA of 4.00 in both his Bachelor's and Master's degrees in Computer Science and Engineering.</p>
-                            <a href="https://www.facebook.com/share/v/1CxMUzFsHV/" class="watch-now">&#9658; Watch Now</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 1: Convocation -->
+            <tr>
+                <td class="story-section">
+                    <a
+                        href="https://www.tbsnews.net/economy/corporates/uiu-holds-8th-convocation-awards-degrees-1736-students-1320696">
+                        <img src="images/UIU_Convocation.jpg" alt="UIU 8th Convocation" width="550"
+                            style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                    </a>
+                    <h2 style="color: #FF5722; margin-top: 20px;">UIU's 8th Convocation Sees 1,736 Students Graduate
+                    </h2>
+                    <p>United International University (UIU) celebrated its 8th Convocation on December 27, 2025,
+                        awarding degrees to 1,736 students. During the ceremony, speakers encouraged the new graduates
+                        to contribute to societal development and dedicate themselves to the welfare of humanity. Four
+                        outstanding students were also awarded gold medals for academic excellence.</p>
+                    <a href="https://www.tbsnews.net/economy/corporates/uiu-holds-8th-convocation-awards-degrees-1736-students-1320696"
+                        class="read-more">[Read More] &rarr;</a>
+                </td>
+            </tr>
 
-        <!-- Story 3: Anas Osmani (Gold Medalist) -->
-        <tr>
-            <td class="story-section">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/Osmani.png" alt="Anas Osmani" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>Golden words from the Gold Medalist: Anas Osmani</h2>
-                            <p>Anas Mohammad Ishfaqul Muktadir Osmani was awarded the Gold Medal for his exceptional academic performance in the Bachelor of Science in Computer Science and Engineering program. Graduating with the highest distinction of Summa Cum Laude, he was recognized for his outstanding achievements during the 8th Convocation of United International University.</p>
-                            <a href="https://www.facebook.com/share/v/1C6zz1k1h8/" class="watch-now">&#9658; Watch Now</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 2: Tareq Hasan (Gold Medalist) -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Tareq.png" alt="Md. Tareq Hasan" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Golden words from the Gold Medalist: Md. Tareq Hasan</h2>
+                                <p>Md. Tareq Hasan, a lecturer in UIU's CSE department, was awarded a gold medal at the
+                                    8th Convocation for academic excellence. This is his second gold medal from the
+                                    university, having achieved a perfect CGPA of 4.00 in both his Bachelor's and
+                                    Master's degrees in Computer Science and Engineering.</p>
+                                <a href="https://www.facebook.com/share/v/1CxMUzFsHV/" class="watch-now">&#9658; Watch
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 4: Fahim Ahad (Gold Medalist) -->
-        <tr>
-            <td class="story-section bg-gray">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/Fahim.png" alt="Mr. Fahim Ahad" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>Golden words from the Gold Medalist: Mr. Fahim Ahad</h2>
-                            <p>Mr. Fahim Ahad, a graduate of the Executive MBA program, was awarded the Gold Medal for his exceptional academic performance. Achieving the highest distinction of Summa Cum Laude, he was recognized for his outstanding accomplishments during the 8th Convocation of United International University.</p>
-                            <a href="https://www.facebook.com/share/v/17jwd3LR7L/" class="watch-now">&#9658; Watch Now</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 3: Anas Osmani (Gold Medalist) -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Osmani.png" alt="Anas Osmani" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Golden words from the Gold Medalist: Anas Osmani</h2>
+                                <p>Anas Mohammad Ishfaqul Muktadir Osmani was awarded the Gold Medal for his exceptional
+                                    academic performance in the Bachelor of Science in Computer Science and Engineering
+                                    program. Graduating with the highest distinction of Summa Cum Laude, he was
+                                    recognized for his outstanding achievements during the 8th Convocation of United
+                                    International University.</p>
+                                <a href="https://www.facebook.com/share/v/1C6zz1k1h8/" class="watch-now">&#9658; Watch
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 5: Sharmin Rahman Swarna (Gold Medalist) -->
-        <tr>
-            <td class="story-section">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/Swarna.png" alt="Ms. Sharmin Rahman Swarna" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>Golden words from the Gold Medalists: Ms. Sharmin Rahman Swarna</h2>
-                            <p>During the 8th Convocation of United International University, Ms. Sharmin Rahman Swarna was honored with the Gold Medal for her outstanding academic record in the BBA program. In addition to this prestigious award, she also earned the title of Valedictorian and graduated with the highest honor of Summa Cum Laude.</p>
-                            <a href="https://www.facebook.com/share/v/1H4afU6uVS/" class="watch-now">&#9658; Watch Now</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 4: Fahim Ahad (Gold Medalist) -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Fahim.png" alt="Mr. Fahim Ahad" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Golden words from the Gold Medalist: Mr. Fahim Ahad</h2>
+                                <p>Mr. Fahim Ahad, a graduate of the Executive MBA program, was awarded the Gold Medal
+                                    for his exceptional academic performance. Achieving the highest distinction of Summa
+                                    Cum Laude, he was recognized for his outstanding accomplishments during the 8th
+                                    Convocation of United International University.</p>
+                                <a href="https://www.facebook.com/share/v/17jwd3LR7L/" class="watch-now">&#9658; Watch
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 6: EEE Embedded Systems Lab -->
-        <tr>
-            <td class="story-section bg-gray">
-                <a href="https://www.facebook.com/share/v/17y4MnvPvX/">
-                    <img src="images/EEE.png" alt="EEE Embedded Systems Lab" width="550" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                </a>
-                <h2 style="color: #FF5722; margin-top: 20px;">UIU EEE Embedded Systems Lab Enables Real-time Learning and Innovation!</h2>
-                <p>UIU has launched a new embedded systems lab to ensure students are industry-ready. Each student has a personal setup with a signal generator, oscilloscope, and power supply, allowing them to conduct hands-on experiments while simultaneously learning theory. This innovative approach provides a practical, real-time learning experience, setting a new standard for engineering education.</p>
-                <a href="https://www.facebook.com/share/v/17y4MnvPvX/" class="watch-now">&#9658; Watch Now</a>
-            </td>
-        </tr>
+            <!-- Story 5: Sharmin Rahman Swarna (Gold Medalist) -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Swarna.png" alt="Ms. Sharmin Rahman Swarna" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Golden words from the Gold Medalists: Ms. Sharmin Rahman Swarna</h2>
+                                <p>During the 8th Convocation of United International University, Ms. Sharmin Rahman
+                                    Swarna was honored with the Gold Medal for her outstanding academic record in the
+                                    BBA program. In addition to this prestigious award, she also earned the title of
+                                    Valedictorian and graduated with the highest honor of Summa Cum Laude.</p>
+                                <a href="https://www.facebook.com/share/v/1H4afU6uVS/" class="watch-now">&#9658; Watch
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 7: Harvard Hackathon -->
-        <tr>
-            <td class="story-section">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/Harverd.png" alt="Harvard HSIL Hackathon" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>Transform Health Systems with AI at the Harvard HSIL Hackathon 2026</h2>
-                            <p>UIU, the official Bangladesh Hub for the Harvard HSIL Hackathon, invites innovators to build high-value health systems using AI. This event brings together students, clinicians, engineers, and entrepreneurs to design and pitch technology-powered solutions. Global winners will participate in a Venture Building Program at Harvard. Registration is open to all Bangladeshi citizens and residents and closes on January 30, 2026.</p>
-                            <a href="https://www.facebook.com/share/p/17awoNhv47/" class="read-more">[Read More] &rarr;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 6: EEE Embedded Systems Lab -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <a href="https://www.facebook.com/share/v/17y4MnvPvX/">
+                        <img src="images/EEE.png" alt="EEE Embedded Systems Lab" width="550"
+                            style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                    </a>
+                    <h2 style="color: #FF5722; margin-top: 20px;">UIU EEE Embedded Systems Lab Enables Real-time
+                        Learning and Innovation!</h2>
+                    <p>UIU has launched a new embedded systems lab to ensure students are industry-ready. Each student
+                        has a personal setup with a signal generator, oscilloscope, and power supply, allowing them to
+                        conduct hands-on experiments while simultaneously learning theory. This innovative approach
+                        provides a practical, real-time learning experience, setting a new standard for engineering
+                        education.</p>
+                    <a href="https://www.facebook.com/share/v/17y4MnvPvX/" class="watch-now">&#9658; Watch Now</a>
+                </td>
+            </tr>
 
-        <!-- Story 8: IIUM -->
-        <tr>
-            <td class="story-section bg-gray">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/IIUM.png" alt="IIUM Delegation" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>IIUM Delegation Visits UIU to Explore Collaboration</h2>
-                            <p>Distinguished faculty members from International Islamic University Malaysia (IIUM), including the Dean of Engineering, visited UIU to discuss opportunities for academic and research collaboration. The meeting included senior faculty and management from UIU, laying the groundwork for a future partnership. Both universities aim to sign an MoU soon to facilitate research collaboration, faculty and student exchange programs, and special online courses.</p>
-                            <a href="https://www.facebook.com/share/p/1Appa2kVMV/" class="read-more">[Read More] &rarr;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 7: Harvard Hackathon -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Harverd.png" alt="Harvard HSIL Hackathon" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Transform Health Systems with AI at the Harvard HSIL Hackathon 2026</h2>
+                                <p>UIU, the official Bangladesh Hub for the Harvard HSIL Hackathon, invites innovators
+                                    to build high-value health systems using AI. This event brings together students,
+                                    clinicians, engineers, and entrepreneurs to design and pitch technology-powered
+                                    solutions. Global winners will participate in a Venture Building Program at Harvard.
+                                    Registration is open to all Bangladeshi citizens and residents and closes on January
+                                    30, 2026.</p>
+                                <a href="https://www.facebook.com/share/p/17awoNhv47/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 9: Robi Axiata -->
-        <tr>
-            <td class="story-section">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/Robi.png" alt="Robi Axiata" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>UIU and Robi Axiata Partner to Boost Graduate Employability and AI Innovation</h2>
-                            <p>United International University (UIU) has signed an MoU with Robi Axiata Limited to enhance graduate employability and foster industry-academia collaboration in research, innovation, and artificial intelligence. The partnership will include skill development programs, joint research, AI workshops, and leadership sessions. The agreement was signed by senior officials from both organizations, marking a significant step towards bridging the gap between academia and industry.</p>
-                            <a href="https://www.facebook.com/share/p/1Gpg8z83gy/" class="read-more">[Read More] &rarr;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 8: IIUM -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/IIUM.png" alt="IIUM Delegation" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>IIUM Delegation Visits UIU to Explore Collaboration</h2>
+                                <p>Distinguished faculty members from International Islamic University Malaysia (IIUM),
+                                    including the Dean of Engineering, visited UIU to discuss opportunities for academic
+                                    and research collaboration. The meeting included senior faculty and management from
+                                    UIU, laying the groundwork for a future partnership. Both universities aim to sign
+                                    an MoU soon to facilitate research collaboration, faculty and student exchange
+                                    programs, and special online courses.</p>
+                                <a href="https://www.facebook.com/share/p/1Appa2kVMV/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 10: ICT -->
-        <tr>
-            <td class="story-section bg-gray">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/ICT.png" alt="ICT Division MoU" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>UIU and iDEA Project of ICT Division Sign MoU</h2>
-                            <p>United International University (UIU) has partnered with the Innovation Design and Entrepreneurship Academy (iDEA) Project of the ICT Division to foster innovation and entrepreneurship. The collaboration will focus on building skills for young innovators, jointly organizing events, and utilizing advanced lab facilities. This MoU, signed by senior officials from both organizations, marks a significant step towards creating a robust ecosystem for aspiring entrepreneurs.</p>
-                            <a href="https://www.facebook.com/share/p/1Cqer2r8Xc/" class="read-more">[Read More] &rarr;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 9: Robi Axiata -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Robi.png" alt="Robi Axiata" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>UIU and Robi Axiata Partner to Boost Graduate Employability and AI Innovation</h2>
+                                <p>United International University (UIU) has signed an MoU with Robi Axiata Limited to
+                                    enhance graduate employability and foster industry-academia collaboration in
+                                    research, innovation, and artificial intelligence. The partnership will include
+                                    skill development programs, joint research, AI workshops, and leadership sessions.
+                                    The agreement was signed by senior officials from both organizations, marking a
+                                    significant step towards bridging the gap between academia and industry.</p>
+                                <a href="https://www.facebook.com/share/p/1Gpg8z83gy/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 11: Robolution (Reusing EEE.png or generic) -->
-        <tr>
-            <td class="story-section">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/EEE.png" alt="Robolution Awards" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>UIU EEE Students Sweep Top Awards at Robolution 2025</h2>
-                            <p>In a remarkable display of skill, students from UIU's EEE department secured all top three positions at Robolution 2025, a VLSI Design Competition hosted by the MIST Robotics Club. The teams—Design Dynamos, DRC Error, and Bit-4-FET—claimed the Champion, 1st Runner-up, and 2nd Runner-up titles, respectively. This clean sweep highlights the students' exceptional talent and creativity in the field.</p>
-                            <a href="https://www.facebook.com/share/p/1DMhpYTQtv/" class="read-more">[Read More] &rarr;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 10: ICT -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/ICT.png" alt="ICT Division MoU" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>UIU and iDEA Project of ICT Division Sign MoU</h2>
+                                <p>United International University (UIU) has partnered with the Innovation Design and
+                                    Entrepreneurship Academy (iDEA) Project of the ICT Division to foster innovation and
+                                    entrepreneurship. The collaboration will focus on building skills for young
+                                    innovators, jointly organizing events, and utilizing advanced lab facilities. This
+                                    MoU, signed by senior officials from both organizations, marks a significant step
+                                    towards creating a robust ecosystem for aspiring entrepreneurs.</p>
+                                <a href="https://www.facebook.com/share/p/1Cqer2r8Xc/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 12: Social Services -->
-        <tr>
-            <td class="story-section bg-gray">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/Cold.png" alt="Winter Clothes Distribution" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>UIU Social Services Club Provides Aid to Cold-Stricken Communities</h2>
-                            <p>The UIU Social Services Club conducted its 'Winter Clothes Distribution 2025' campaign in the Chilmari Upazila of Kurigram, providing essential aid to underprivileged communities. Through fundraising within the university, the club distributed 500 blankets and warm clothing, benefiting around 600 individuals and 350 families. This initiative brought warmth and hope to marginalized people in remote char areas.</p>
-                            <a href="https://www.facebook.com/share/p/1aqQbjnUgq/" class="read-more">[Read More] &rarr;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 11: Robolution (Reusing EEE.png or generic) -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/EEE.png" alt="Robolution Awards" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>UIU EEE Students Sweep Top Awards at Robolution 2025</h2>
+                                <p>In a remarkable display of skill, students from UIU's EEE department secured all top
+                                    three positions at Robolution 2025, a VLSI Design Competition hosted by the MIST
+                                    Robotics Club. The teams—Design Dynamos, DRC Error, and Bit-4-FET—claimed the
+                                    Champion, 1st Runner-up, and 2nd Runner-up titles, respectively. This clean sweep
+                                    highlights the students' exceptional talent and creativity in the field.</p>
+                                <a href="https://www.facebook.com/share/p/1DMhpYTQtv/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- Story 13: POV -->
-        <tr>
-            <td class="story-section">
-                <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
-                    <tr>
-                        <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
-                            <img src="images/POV.png" alt="Point of View" width="200" style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
-                        </td>
-                        <td valign="top" class="col-text">
-                            <h2>UIU's 'Point of View' Features Beximco's Dr. Hasan Mahmood on Health & Innovation</h2>
-                            <p>Episode 8 of "Point of View," presented by UNITED Healthcare and powered by UIU, features an insightful conversation with Dr. Hasan Mahmood, Lead of Learning and Development at Beximco Pharmaceuticals. The discussion covers the current status of Bangladesh's pharmaceutical industry, health literacy, and the potential for innovation in medicine and technology. This exclusive podcast on business and innovation is a must-watch for industry insights.</p>
-                            <a href="https://www.facebook.com/share/v/1AEoM65Bfq/" class="watch-now">&#9658; Watch Now</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+            <!-- Story 12: Social Services -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Cold.png" alt="Winter Clothes Distribution" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>UIU Social Services Club Provides Aid to Cold-Stricken Communities</h2>
+                                <p>The UIU Social Services Club conducted its 'Winter Clothes Distribution 2025'
+                                    campaign in the Chilmari Upazila of Kurigram, providing essential aid to
+                                    underprivileged communities. Through fundraising within the university, the club
+                                    distributed 500 blankets and warm clothing, benefiting around 600 individuals and
+                                    350 families. This initiative brought warmth and hope to marginalized people in
+                                    remote char areas.</p>
+                                <a href="https://www.facebook.com/share/p/1aqQbjnUgq/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <!-- FOOTER -->
-        <tr>
-            <td align="center" style="background-color: #333333; color: #ffffff; padding: 30px;">
-                <h3 style="color: #fff; margin-top: 0; font-size: 18px;">Wish to Collaborate?</h3>
-                <p style="color: #cccccc; margin-bottom: 25px; font-size: 14px;">Connect with us for partnerships at <br>
-                <a href="mailto:mutiatur@admin.uiu.ac.bd" style="color: #FF5722; font-weight: bold; text-decoration: none;">mutiatur@admin.uiu.ac.bd</a></p>
-                
-                <table border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td style="padding: 0 8px;">
-                            <a href="https://www.facebook.com/uiuinfo"><img src="https://swtest.uiu.ac.bd/news-letter/assets/images/facebook.png" alt="Facebook" width="28"></a>
-                        </td>
-                        <td style="padding: 0 8px;">
-                            <a href="https://www.linkedin.com/school/uiuinfo/"><img src="https://swtest.uiu.ac.bd/news-letter/assets/images/linkedin.png" alt="LinkedIn" width="28"></a>
-                        </td>
-                        <td style="padding: 0 8px;">
-                            <a href="https://www.youtube.com/channel/UCRt5IHIN_lhbAic3hfrS2mA"><img src="https://swtest.uiu.ac.bd/news-letter/assets/images/youtube.png" alt="YouTube" width="28"></a>
-                        </td>
-                    </tr>
-                </table>
+            <!-- Story 13: POV -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/POV.png" alt="Point of View" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>UIU's 'Point of View' Features Beximco's Dr. Hasan Mahmood on Health & Innovation
+                                </h2>
+                                <p>Episode 8 of "Point of View," presented by UNITED Healthcare and powered by UIU,
+                                    features an insightful conversation with Dr. Hasan Mahmood, Lead of Learning and
+                                    Development at Beximco Pharmaceuticals. The discussion covers the current status of
+                                    Bangladesh's pharmaceutical industry, health literacy, and the potential for
+                                    innovation in medicine and technology. This exclusive podcast on business and
+                                    innovation is a must-watch for industry insights.</p>
+                                <a href="https://www.facebook.com/share/v/1AEoM65Bfq/" class="watch-now">&#9658; Watch
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-                <p style="font-size: 11px; color: #777; margin-top: 25px; border-top: 1px solid #444; padding-top: 20px;">&copy; 2026 United International University. All rights reserved.</p>
-            </td>
-        </tr>
+            <!-- FOOTER -->
+            <tr>
+                <td align="center" style="background-color: #333333; color: #ffffff; padding: 30px;">
+                    <h3 style="color: #fff; margin-top: 0; font-size: 18px;">Wish to Collaborate?</h3>
+                    <p style="color: #cccccc; margin-bottom: 25px; font-size: 14px;">Connect with us for partnerships at
+                        <br>
+                        <a href="mailto:mutiatur@admin.uiu.ac.bd"
+                            style="color: #FF5722; font-weight: bold; text-decoration: none;">mutiatur@admin.uiu.ac.bd</a>
+                    </p>
 
-    </table>
-</center>
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="padding: 0 8px;">
+                                <a href="https://www.facebook.com/uiuinfo"><img
+                                        src="https://swtest.uiu.ac.bd/news-letter/assets/images/facebook.png"
+                                        alt="Facebook" width="28"></a>
+                            </td>
+                            <td style="padding: 0 8px;">
+                                <a href="https://www.linkedin.com/school/uiuinfo/"><img
+                                        src="https://swtest.uiu.ac.bd/news-letter/assets/images/linkedin.png"
+                                        alt="LinkedIn" width="28"></a>
+                            </td>
+                            <td style="padding: 0 8px;">
+                                <a href="https://www.youtube.com/channel/UCRt5IHIN_lhbAic3hfrS2mA"><img
+                                        src="https://swtest.uiu.ac.bd/news-letter/assets/images/youtube.png"
+                                        alt="YouTube" width="28"></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p
+                        style="font-size: 11px; color: #777; margin-top: 25px; border-top: 1px solid #444; padding-top: 20px;">
+                        &copy; 2026 United International University. All rights reserved.</p>
+                </td>
+            </tr>
+
+        </table>
+    </center>
 
 </body>
+
 </html>
