@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UIU February Newsletter</title>
+    <!-- html2pdf.js library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         /* RESET & BASICS */
         body {
@@ -129,12 +131,18 @@
             transition: all 0.3s ease;
             box-shadow: 0 3px 12px rgba(255, 87, 34, 0.3);
             border: none;
+            cursor: pointer;
         }
 
-        .download-btn:hover {
+        .download-btn:hover:not(:disabled) {
             background: #E64A19;
             transform: translateY(-2px);
             box-shadow: 0 5px 18px rgba(255, 87, 34, 0.4);
+        }
+
+        .download-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
         }
 
         .download-btn::before {
@@ -213,10 +221,11 @@
     <center class="wrapper">
         <!-- Download PDF Button -->
         <div class="download-btn-container">
-            <a href="#" class="download-btn" onclick="downloadPDF(); return false;">Download as PDF</a>
+            <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
         </div>
 
-        <table class="main-content" width="600" cellpadding="0" cellspacing="0" border="0" align="center">
+        <table class="main-content" width="600" cellpadding="0" cellspacing="0" border="0" align="center"
+            id="newsletter-content">
 
             <!-- BANNER -->
             <tr>
@@ -574,39 +583,43 @@
 
     <script>
         function downloadPDF() {
-            // Hide the download button before printing
-            const downloadBtn = document.querySelector('.download-btn-container');
-            if (downloadBtn) {
-                downloadBtn.style.display = 'none';
-            }
+            const element = document.getElementById('newsletter-content');
+            const button = document.querySelector('.download-btn');
 
-            // Trigger print dialog (user can save as PDF)
-            window.print();
+            // Disable button and show loading state
+            button.disabled = true;
+            button.innerHTML = '⏳ Generating PDF...';
 
-            // Show the button again after print dialog closes
-            setTimeout(() => {
-                if (downloadBtn) {
-                    downloadBtn.style.display = 'block';
+            const opt = {
+                margin: 0,
+                filename: 'UIU_February_Newsletter_2026.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    letterRendering: true
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
                 }
-            }, 100);
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Re-enable button after download
+                button.disabled = false;
+                button.innerHTML = '📥 Download as PDF';
+            }).catch(() => {
+                // Handle error
+                button.disabled = false;
+                button.innerHTML = '❌ Try Again';
+                setTimeout(() => {
+                    button.innerHTML = '📥 Download as PDF';
+                }, 3000);
+            });
         }
-
-        // Add print-specific styles
-        const style = document.createElement('style');
-        style.textContent = `
-            @media print {
-                .download-btn-container {
-                    display: none !important;
-                }
-                body {
-                    background-color: white;
-                }
-                .wrapper {
-                    background-color: white;
-                }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 
 </body>
