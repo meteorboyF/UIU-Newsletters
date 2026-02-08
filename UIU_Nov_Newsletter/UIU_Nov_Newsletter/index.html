@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UIU November Newsletter</title>
-    <!-- html2pdf.js library for PDF generation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         /* RESET & BASICS */
         body {
@@ -219,7 +217,7 @@
     <center class="wrapper">
         <!-- Download PDF Button -->
         <div class="download-btn-container">
-            <button class="download-btn" onclick="downloadPDF()">Download as PDF</button>
+            <a href="#" class="download-btn" onclick="downloadPDF(); return false;">Download as PDF</a>
         </div>
 
         <table class="main-content" width="600" cellpadding="0" cellspacing="0" border="0" align="center"
@@ -461,66 +459,49 @@
 
     <script>
         function downloadPDF() {
-            const element = document.getElementById('newsletter-content');
-            const button = document.querySelector('.download-btn');
-            const wrapper = document.querySelector('.wrapper');
             const btnContainer = document.querySelector('.download-btn-container');
 
-            // Disable button and show loading state
-            button.disabled = true;
-            button.innerHTML = '⏳ Generating PDF...';
-
-            // Hide elements that shouldn't be in PDF
+            // Hide download button
             btnContainer.style.display = 'none';
 
-            // Temporarily modify wrapper for PDF
-            const originalWrapperBg = wrapper.style.backgroundColor;
-            const originalWrapperPadding = wrapper.style.paddingBottom;
-            wrapper.style.backgroundColor = 'white';
-            wrapper.style.paddingBottom = '0';
+            // Trigger print dialog
+            window.print();
 
-            const opt = {
-                margin: [10, 10, 10, 10],
-                filename: 'UIU_November_Newsletter_2025.pdf',
-                image: { type: 'jpeg', quality: 0.95 },
-                html2canvas: {
-                    scale: 2,
-                    useCORS: true,
-                    logging: false,
-                    letterRendering: true,
-                    backgroundColor: '#ffffff'
-                },
-                jsPDF: {
-                    unit: 'mm',
-                    format: 'a4',
-                    orientation: 'portrait'
-                },
-                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-            };
-
-            html2pdf().set(opt).from(element).save().then(() => {
-                // Restore original styles
-                wrapper.style.backgroundColor = originalWrapperBg;
-                wrapper.style.paddingBottom = originalWrapperPadding;
+            // Show button again after print dialog
+            setTimeout(() => {
                 btnContainer.style.display = 'block';
-
-                // Re-enable button after download
-                button.disabled = false;
-                button.innerHTML = '📥 Download as PDF';
-            }).catch(() => {
-                // Restore original styles on error
-                wrapper.style.backgroundColor = originalWrapperBg;
-                wrapper.style.paddingBottom = originalWrapperPadding;
-                btnContainer.style.display = 'block';
-
-                // Handle error
-                button.disabled = false;
-                button.innerHTML = '❌ Try Again';
-                setTimeout(() => {
-                    button.innerHTML = '📥 Download as PDF';
-                }, 3000);
-            });
+            }, 100);
         }
+
+        // Add print styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @media print {
+                .download-btn-container {
+                    display: none !important;
+                }
+                body {
+                    background-color: white !important;
+                    margin: 0;
+                    padding: 0;
+                }
+                .wrapper {
+                    background-color: white !important;
+                    padding: 0 !important;
+                }
+                .main-content {
+                    box-shadow: none !important;
+                    max-width: 100% !important;
+                }
+                .story-section {
+                    page-break-inside: avoid;
+                }
+                .two-col-table {
+                    page-break-inside: avoid;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 
 </body>
