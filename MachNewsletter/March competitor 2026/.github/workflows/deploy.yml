@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - march-2026-newsletter
-      - combined-march-newsletter-2026
   workflow_dispatch:
 
 permissions:
