@@ -581,18 +581,32 @@
 
     <script>
         function downloadPDF() {
-            const btnContainer = document.querySelector('.download-btn-container');
+            try {
+                console.log('Download PDF clicked');
+                const btnContainer = document.querySelector('.download-btn-container');
 
-            // Hide download button
-            btnContainer.style.display = 'none';
+                if (!btnContainer) {
+                    console.error('Button container not found');
+                    alert('Error: Button container not found');
+                    return;
+                }
 
-            // Trigger print dialog
-            window.print();
+                // Hide download button
+                btnContainer.style.display = 'none';
 
-            // Show button again after print dialog
-            setTimeout(() => {
-                btnContainer.style.display = 'block';
-            }, 100);
+                // Trigger print dialog
+                console.log('Opening print dialog');
+                window.print();
+
+                // Show button again after print dialog
+                setTimeout(() => {
+                    btnContainer.style.display = 'block';
+                    console.log('Button restored');
+                }, 100);
+            } catch (error) {
+                console.error('Error in downloadPDF:', error);
+                alert('Error: ' + error.message);
+            }
         }
 
         // Add print styles

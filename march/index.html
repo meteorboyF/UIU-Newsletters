@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIU March Newsletter 2026</title>
+    <style>
+        /* RESET & BASICS */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table {
+            border-spacing: 0;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* TYPOGRAPHY */
+        h2 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #333333;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+            font-size: 15px;
+            color: #555555;
+            line-height: 1.6;
+        }
+
+        a.read-more {
+            color: #FF5722;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        a.read-more:hover {
+            border-bottom-color: #FF5722;
+        }
+
+        a.watch-now {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        a.watch-now:hover {
+            border-bottom-color: #d32f2f;
+        }
+
+        /* LAYOUTS */
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f4f4f4;
+            padding-bottom: 40px;
+        }
+
+        .main-content {
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .story-section {
+            padding: 25px;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .bg-gray {
+            background-color: #f9f9f9;
+        }
+
+        /* DOWNLOAD BUTTON */
+        .download-btn-container {
+            text-align: center;
+            padding: 15px 20px;
+            background: #ffffff;
+            border-bottom: 3px solid #FF5722;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #FF5722;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 12px rgba(255, 87, 34, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover:not(:disabled) {
+            background: #E64A19;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 18px rgba(255, 87, 34, 0.4);
+        }
+
+        .download-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .download-btn::before {
+            content: "📥 ";
+            margin-right: 8px;
+        }
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 600px) {
+            .two-col-table {
+                width: 100% !important;
+                display: block;
+            }
+
+            .col-img {
+                width: 100% !important;
+                display: block;
+                padding-right: 0 !important;
+                margin-bottom: 15px;
+            }
+
+            .col-text {
+                width: 100% !important;
+                display: block;
+            }
+
+            .col-text h2 {
+                margin-top: 0 !important;
+            }
+
+            .main-content {
+                width: 100% !important;
+                border-radius: 0;
+            }
+
+            h2 {
+                font-size: 18px !important;
+            }
+
+            .download-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .story-section {
+                padding: 20px 15px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .wrapper {
+                padding-bottom: 20px;
+            }
+
+            .story-section {
+                padding: 15px 12px;
+            }
+
+            h2 {
+                font-size: 16px !important;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .download-btn-container {
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <center class="wrapper">
+        <!-- Download PDF Button -->
+        <div class="download-btn-container">
+            <a href="#" class="download-btn" onclick="downloadPDF(); return false;">Download as PDF</a>
+        </div>
+
+        <table class="main-content" width="600" cellpadding="0" cellspacing="0" border="0" align="center"
+            id="newsletter-content">
+
+            <!-- BANNER -->
+            <tr>
+                <td align="center" style="background-color: #ffffff; padding: 0;">
+                    <img src="images/UIU March Newsletter Banner 2026.jpg" alt="UIU March Newsletter Banner" width="600"
+                        style="width: 100%; height: auto; display: block;">
+                </td>
+            </tr>
+
+            <!-- Story 1: Industry–Academia Collaboration Seminar -->
+            <tr>
+                <td class="story-section">
+                    <a
+                        href="https://www.thedailystar.net/campus/noticeboard/news/uiu-holds-seminar-ai-business-excellence-4101956">
+                        <img src="images/7FebAIEvent.png" alt="Industry–Academia Collaboration Seminar" width="550"
+                            style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                    </a>
+                    <h2 style="color: #FF5722; margin-top: 20px;">Industry–Academia Collaboration Seminar: AI for
+                        Business Excellence</h2>
+                    <p>UIU hosted the seminar “AI for Business Excellence” on 7 February at the UIU campus, bringing
+                        academia and industry perspectives to one platform. The speakers discussed emerging AI trends,
+                        policy considerations, human resource management, and the skills required to leverage AI
+                        effectively for sustainable business growth.</p>
+                    <a href="https://www.thedailystar.net/campus/noticeboard/news/uiu-holds-seminar-ai-business-excellence-4101956"
+                        class="read-more">[Read More] &rarr;</a>
+                </td>
+            </tr>
+
+            <!-- Story 2: BBA in AIS Earns IIA Academic Alliance Recognition -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/UIU%20BBA%20in%20AIS%20IIApng.png" alt="BBA in AIS Accreditation"
+                                    width="200" style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>BBA in AIS Earns IIA Academic Alliance Recognition</h2>
+                                <p>UIU’s BBA in Accounting and Information Systems (AIS) received Academic Alliance
+                                    accreditation from the Institute of Internal Auditors (IIA), USA—with UIU noted as
+                                    the second university in Bangladesh to receive it. The recognition reflects
+                                    alignment with international internal-audit education standards and supports
+                                    stronger academia–industry linkage for career readiness.</p>
+                                <a href="https://www.tbsnews.net/economy/corporates/uiu-bba-ais-receives-iia-academic-alliance-accreditation-1369336"
+                                    class="read-more">[Read More] &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 3: IQAC Faculty Induction Training -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Newfaculty%20training.png" alt="Faculty Induction Training" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>IQAC Faculty Induction Training: Strengthening Teaching Excellence</h2>
+                                <p>IQAC conducted a faculty induction and capacity-building program for newly appointed
+                                    faculty members, focusing on academic quality and teaching practice. The session
+                                    supports consistent instructional standards and helps faculty align with UIU’s
+                                    academic framework and classroom expectations.</p>
+                                <a href="https://web.facebook.com/share/p/1F6W1SKZ2k/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 4: Alumni Talks : Mr. Kazi Oasek Bin Khorshed -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Mr.%20Kazi%20Oasek%20Bin%20Khorshed.png"
+                                    alt="Mr. Kazi Oasek Bin Khorshed" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Alumni Talks : Mr. Kazi Oasek Bin Khorshed</h2>
+                                <p>Mr. Kazi Oasek Bin Khorshed - Region Head, Marico Bangladesh - shared his valuable
+                                    interaction with current students of UIU with whom he shared his education at UIU
+                                    and success thereafter in several brands.</p>
+                                <a href="https://web.facebook.com/share/v/1CNhUaJkK5/" class="watch-now">&#9658; View
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 5: Career Pathways & Industry Perspective -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Mr.%20AB%20Taimur%20Polok.png" alt="Mr. AB Taimur Polok" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Career Pathways & Industry Perspective</h2>
+                                <p>Mr. AB Taimur Polok - Area Manager, Unilever Bangladesh - reminisced his time as a
+                                    UIU student and inspiring others to achieve success in MNCs as well as in big
+                                    conglomerates.</p>
+                                <a href="https://web.facebook.com/share/v/1743msFVpA/" class="watch-now">&#9658; View
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 6: Documentary Screening: “Chhayabritto (The Silhouette)” -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Chhayabritto.png" alt="Chhayabritto" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Documentary Screening: “Chhayabritto (The Silhouette)”</h2>
+                                <p>UIU’s Directorate of Career Counseling & Student Affairs (DCCSA), through the Theatre
+                                    & Film Club, presents the documentary “Chhayabritto (The Silhouette)” in observance
+                                    of International Mother Language Day. The film pays tribute to Bangladesh’s rich
+                                    linguistic and cultural diversity and highlights the importance of respecting every
+                                    language.</p>
+                                <a href="https://web.facebook.com/share/v/1AYJdDZjsg/" class="watch-now">&#9658; View
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 7: Convocation Message: Well-wishes from United Healthcare -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/UnitedHealthcare.png" alt="United Healthcare" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Convocation Message: Well-wishes from United Healthcare</h2>
+                                <p>United Healthcare shared warm wishes for UIU graduates, celebrating their milestone
+                                    and encouraging a healthy, confident start to the next chapter. The message
+                                    recognizes graduates’ achievements and extends support as they move forward into
+                                    professional life.</p>
+                                <a href="https://web.facebook.com/share/v/1DkYLkgUdg/" class="watch-now">&#9658; View
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 8: Achievement Spotlight: UIU Faculty Tops HEAT Workshop -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/UIU%20FacultyachievementsEEE.png" alt="Mr. Imtiaz Zahan Chowdhury"
+                                    width="200" style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Achievement Spotlight: UIU Faculty Tops HEAT Workshop</h2>
+                                <p>Mr. Imtiaz Zahan Chowdhury, Lecturer at the School of Business and Economics (SoBE),
+                                    has secured the First Merit Position in the first batch of the Professional
+                                    Development Training (PDT) conducted by the University Teachers’ Training Academy
+                                    (UTTA) under the Higher Education Acceleration and Transformation (HEAT) Project.
+                                </p>
+                                <a href="https://web.facebook.com/share/p/1FHe6EsEj2/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 9: UIU × AI Forum Bangladesh Podcast -->
+            <tr>
+                <td class="story-section">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/PodcastonAI.png" alt="Podcast on AI" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #eee;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>UIU × AI Forum Bangladesh Podcast: Education & Careers in the Age of AI</h2>
+                                <p>UIU and AI Forum Bangladesh present “এআই নিয়ে জেন জি, কেমন সরকার চাইছি?” (in
+                                    association with IRIIC, media partner: Bonik Barta). This episode focuses on
+                                    Education & Career in the AI era.</p>
+                                <a href="https://web.facebook.com/share/v/1KFdWwWUUT/" class="watch-now">&#9658; View
+                                    Now</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Story 10: Career Update: UIU Graduates Recruited at Bitopia Group -->
+            <tr>
+                <td class="story-section bg-gray">
+                    <table width="100%" cellpadding="0" cellspacing="0" class="two-col-table">
+                        <tr>
+                            <td width="220" valign="top" class="col-img" style="padding-right: 20px;">
+                                <img src="images/Betopia.png" alt="Bitopia Group Recruitment" width="200"
+                                    style="width: 100%; border-radius: 6px; border: 1px solid #e0e0e0;">
+                            </td>
+                            <td valign="top" class="col-text">
+                                <h2>Career Update: UIU Graduates Recruited at Bitopia Group</h2>
+                                <p>UIU graduates have been recruited at Bitopia Group, reflecting strong employability
+                                    and industry confidence in UIU talent. The update highlights how UIU’s academic
+                                    preparation and skills orientation translate into real hiring outcomes.</p>
+                                <a href="https://web.facebook.com/share/p/19naZy6RX7/" class="read-more">[Read More]
+                                    &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- FOOTER -->
+            <tr>
+                <td align="center" style="background-color: #333333; color: #ffffff; padding: 30px;">
+                    <h3 style="color: #fff; margin-top: 0; font-size: 18px;">Wish to Collaborate?</h3>
+                    <p style="color: #cccccc; margin-bottom: 25px; font-size: 14px;">Connect with us for partnerships at
+                        <br>
+                        <a href="mailto:mutiatur@admin.uiu.ac.bd"
+                            style="color: #FF5722; font-weight: bold; text-decoration: none;">mutiatur@admin.uiu.ac.bd</a>
+                    </p>
+
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="padding: 0 8px;">
+                                <a href="https://www.facebook.com/uiuinfo"><img
+                                        src="https://swtest.uiu.ac.bd/news-letter/assets/images/facebook.png"
+                                        alt="Facebook" width="28"></a>
+                            </td>
+                            <td style="padding: 0 8px;">
+                                <a href="https://www.linkedin.com/school/uiuinfo/"><img
+                                        src="https://swtest.uiu.ac.bd/news-letter/assets/images/linkedin.png"
+                                        alt="LinkedIn" width="28"></a>
+                            </td>
+                            <td style="padding: 0 8px;">
+                                <a href="https://www.youtube.com/channel/UCRt5IHIN_lhbAic3hfrS2mA"><img
+                                        src="https://swtest.uiu.ac.bd/news-letter/assets/images/youtube.png"
+                                        alt="YouTube" width="28"></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p
+                        style="font-size: 11px; color: #777; margin-top: 25px; border-top: 1px solid #444; padding-top: 20px;">
+                        &copy; 2026 United International University. All rights reserved.</p>
+                </td>
+            </tr>
+
+        </table>
+    </center>
+
+    <script>
+        function downloadPDF() {
+            try {
+                console.log('Download PDF clicked');
+                const btnContainer = document.querySelector('.download-btn-container');
+
+                if (!btnContainer) {
+                    console.error('Button container not found');
+                    alert('Error: Button container not found');
+                    return;
+                }
+
+                // Hide download button
+                btnContainer.style.display = 'none';
+
+                // Trigger print dialog
+                console.log('Opening print dialog');
+                window.print();
+
+                // Show button again after print dialog
+                setTimeout(() => {
+                    btnContainer.style.display = 'block';
+                    console.log('Button restored');
+                }, 100);
+            } catch (error) {
+                console.error('Error in downloadPDF:', error);
+                alert('Error: ' + error.message);
+            }
+        }
+
+        // Add print styles
+        const style = document.createElement('style');
+        style.textContent = `
+            @media print {
+                .download-btn-container {
+                    display: none !important;
+                }
+                body {
+                    background-color: white !important;
+                    margin: 0;
+                    padding: 0;
+                }
+                .wrapper {
+                    background-color: white !important;
+                    padding: 0 !important;
+                }
+                .main-content {
+                    box-shadow: none !important;
+                    max-width: 100% !important;
+                }
+                /* Prevent page breaks inside stories */
+                .story-section {
+                    page-break-inside: avoid;
+                }
+                /* Keep two-column layouts together */
+                .two-col-table {
+                    page-break-inside: avoid;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+
+</html>
